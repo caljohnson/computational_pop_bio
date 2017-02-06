@@ -80,7 +80,6 @@ legend("topleft", c("t=1", "t=2", "t=3", "t=4","t=5"), lty=1:5, col=1:5)
 dev.off()
 
 
-
 # (2) Create a plot of the dominant eigenvalue as a function of L 
 #for L between 1 and 5. Add a dashed line at height 1.
 dL = 0.01
@@ -103,8 +102,7 @@ for(i in 1:n.eigens){
 # create file for saving plot as a pdf
 pdf(file="IPM_eigvals.pdf")
 #plot dominant eigenvalues of IPM matrix as function of L
-plot.window(c(1,5), c(0,3))
-plot(L, eigvals, type="l", xlab=expression(L), ylab="Dominant Eigenvalue of IPM matrix")
+plot(L, eigvals, type="l", ylim=c(0,3), xlab=expression(L), ylab="Dominant Eigenvalue of IPM matrix")
 abline(1,0, col=1, lty=2)
 #shut down current plot (paired with "pdf" command above)
 dev.off()
