@@ -82,8 +82,8 @@ dev.off()
 
 # (2) Create a plot of the dominant eigenvalue as a function of L 
 #for L between 1 and 5. Add a dashed line at height 1.
-dL = 0.01
-L = seq(1-dL, 5+dL, by=dL)
+dL = 0.001
+L = seq(dL, 5, by=dL)
 
 #number of dominant eigenvalues to calculate
 n.eigens = length(L)
